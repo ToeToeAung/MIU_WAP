@@ -1,27 +1,26 @@
-import React,{useState} from 'react';
-
-import logo from './logo.svg';
+import React,{ChangeEvent,MouseEvent} from 'react';
 import './App.css';
 
 function App() {
-  let [count,setCount] = useState(0)
-  const increment = () => {
-    setCount( prev => prev+1);
+  const handleClick = (e : MouseEvent<HTMLButtonElement>) => {
+    console.log('Hi',e.target);
   }
 
-  const decrement = () => {
-    setCount(count - 1);
+  const handleChange = (e : ChangeEvent<HTMLInputElement>) => {
+    console.log('Handle Change ',e.target.value);
+  }
+
+  const handleParamsClick = (username:string,e : MouseEvent<HTMLButtonElement>) => {
+    console.log(`Hello, ${username}`,e.target);
   }
   return (
-    <div className="App">
-      <h1>{count}</h1>
-      <hr/>  
-      <div>
-      <button onClick={increment}>+</button>       
-      <button onClick={decrement}>-</button>
-      </div>
-     
-    </div>
+    <>
+    <button onClick={handleClick}>Click me!</button>
+    <hr/>
+    <input onChange={handleChange}></input>
+    <hr/>
+    <button onClick={(e) => handleParamsClick('Toe Toe Aung',e)}> ParamTest </button>
+    </>
   );
 }
 
