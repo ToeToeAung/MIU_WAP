@@ -50,7 +50,7 @@ app.get('/products',(req,res) => {
     const product = products.find((p) => p.id === productId);
 
     if(!product){
-      res.status(404).json({error : 'Product not found'});
+      res.status(500).json({error : 'Product not found'});
     }
 
     if(product.ratings.length === 0){
@@ -71,7 +71,7 @@ app.get('/products',(req,res) => {
       if(ratedProducts.length>0){
         res.json({userid,ratedProducts});
       }else{
-        res.status(404).json({error: `No products found rated by user with ID: ${userId}` })
+        res.status(500).json({error: `No products found rated by user with ID: ${userId}` })
       }
 
     }else{

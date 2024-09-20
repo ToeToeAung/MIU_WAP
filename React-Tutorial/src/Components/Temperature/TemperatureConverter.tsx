@@ -21,7 +21,7 @@ const TemperatureConverter = () => {
         type="text"
         value={celsius}
         onChange={(e) => setCelsius(e.target.value)}
-        placeholder="Enter temperature in Celsius"
+        placeholder="Enter temperature in Celsius to convert !"
       />
       <button onClick={convertToFahrenheit} style={{ marginLeft: '10px' }}>Convert</button>
      
