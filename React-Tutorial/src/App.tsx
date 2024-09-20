@@ -1,10 +1,10 @@
 import './App.css';
-import Parent from './Components/Parent'
+import TemperatureConverter from './Components/Temperature/TemperatureConverter';
 function App() {  
   
   return (
     <div>
-      <Parent/>
+     <TemperatureConverter/>
     </div>
   );
 }
