@@ -66,6 +66,15 @@ export default class Product {
 
     }
 
+    static getAllProducts(){
+        return products;
+    }
+
+    static getProductById(productId: number){
+        const product = products.find(p => p.id === productId);
+        return product;
+    }
+
     static saveRating(productId: number, newRating: Rating) {
         const product = products.find(p => p.id === productId);
 
@@ -101,4 +110,16 @@ export default class Product {
             throw new Error('Please provide User ID');
         }
     }
+
+    static deleteProductById(productId: number){
+        const index = products.findIndex(p => p.id === productId);
+        if(index > -1){
+            products.splice(index,1);
+            return products;
+        }else{
+            throw new Error(`Unable to delete product ID ${productId}`)
+        }
+    }
+
+
 }
