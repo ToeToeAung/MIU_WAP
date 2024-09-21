@@ -71,7 +71,11 @@ export default class Product {
     }
 
     static getProductById(productId: number){
+        console.log("Product ID in the class ",productId)
         const product = products.find(p => p.id === productId);
+        if(!product){
+            throw new Error(`Product doesn't exist with ID : ${productId}`)
+        }
         return product;
     }
 

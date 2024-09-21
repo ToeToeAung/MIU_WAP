@@ -1,5 +1,5 @@
 import express from 'express';
-const app =express();
+const app = express();
 app.enable('case sensitive routing');
 
 app.use((req,res,next) => {

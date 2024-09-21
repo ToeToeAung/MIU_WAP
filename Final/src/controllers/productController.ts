@@ -21,3 +21,7 @@ export const deleteProductById =(req : Request,res : Response) => {
 export const getAllProducts = (req : Request, res : Response) => {
     res.status(200).json({success: true, data : Product.getAllProducts()})
 }
+
+export const getProductById = (req : Request, res : Response) => {
+    res.status(200).json({success : true, data : Product.getProductById(parseInt(req.params.productId))});
+}
