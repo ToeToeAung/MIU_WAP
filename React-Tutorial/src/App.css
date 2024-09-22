@@ -13,6 +13,10 @@
   }
 }
 
+.ptag{
+  color : red;
+}
+
 button {
   background-color: #61dafb;
   font-size: large;
@@ -21,6 +25,7 @@ button {
   font-weight: bold;
   padding: 5px;  
 }
+
 
 .App-header {
   background-color: #282c34;
