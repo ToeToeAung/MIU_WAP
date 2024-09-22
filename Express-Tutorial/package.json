@@ -1,6 +1,6 @@
 {
-  "name": "express-tutorial",
-  "type": "commonjs",
+  "name": "express-tutorial",  
+  "type" : "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
